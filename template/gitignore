@@ -1,0 +1,19 @@
+# arquivos brutos (PDF, foto, planilha): ficam só neste computador
+_kb/
+
+# segredos nunca vão pro git
+.env
+.env.*
+*.pem
+*.key
+
+# config pessoal do Claude Code e do Obsidian nesta máquina
+.claude/settings.local.json
+.obsidian/workspace*.json
+.trash/
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/

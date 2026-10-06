@@ -1,0 +1,29 @@
+#!/bin/sh
+# pre-commit do segundo cérebro.
+#
+# 1. Regenera os blocos AUTO.
+# 2. Adiciona ao commit SÓ os arquivos que o harness gera (nunca `git add -A`).
+# 3. Barra o commit se houver nota órfã.
+#
+# Sem Node na máquina, sai limpo: não trava commit de ninguém.
+
+DIR="$(git rev-parse --show-toplevel)"
+command -v node >/dev/null 2>&1 || exit 0
+
+node "$DIR/scripts/refresh-all.js" 2>/dev/null
+
+# Só re-adiciona derivado que JÁ estava indo no commit, pra não arrastar edição alheia.
+for f in $(git diff --cached --name-only); do
+  case "$f" in
+    INDEX.md|_memory/current-state.md|_memory/pendencias.md|*_index.md)
+      [ -f "$DIR/$f" ] && git add "$DIR/$f" ;;
+  esac
+done
+
+node "$DIR/scripts/check-consistency.js"
+if [ "$?" = "2" ]; then
+  echo "pre-commit: commit barrado — tem nota órfã (lista acima). Conserte e commite de novo."
+  echo "            Pra passar por cima uma vez: git commit --no-verify"
+  exit 1
+fi
+exit 0
