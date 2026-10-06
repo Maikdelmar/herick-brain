@@ -16,7 +16,7 @@ repositório **privado** no GitHub: só o dono vê.
 2. Confira o login: `gh auth status`. Se não estiver logado, peça pra ele rodar **ele mesmo** no terminal:
    `gh auth login` (escolhe GitHub.com → HTTPS → login pelo navegador). **Você não digita senha nem token.**
 3. Antes de subir, varra o cérebro atrás de segredo (senha, token, chave de API, número de documento). Achou? Mostre ao dono e tire da nota antes de continuar.
-4. Pergunte o nome do repositório (sugestão: `segundo-cerebro`) e **confirme que vai ser privado**.
+4. Pergunte o nome do repositório (sugestão: `cerebro-herick`) e **confirme que vai ser privado**.
 5. Com o "sim" dele: `gh repo create <nome> --private --source . --push`.
 
 ## Se já tem `git remote`

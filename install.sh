@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# claude-brain - instalador para macOS e Linux
+# herick-brain - instalador para macOS e Linux
 #
 # Uso:
-#   curl -fsSL https://raw.githubusercontent.com/Maikdelmar/claude-brain/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Maikdelmar/herick-brain/main/install.sh | bash
 #
 # O que faz, nesta ordem:
 #   1. confere (e, se faltar, tenta instalar) git e Node.js 18+
@@ -13,7 +13,7 @@
 # Pasta sem perguntar:  curl ... | BRAIN_DIR=~/meu-cerebro bash
 
 set -euo pipefail
-REPO="Maikdelmar/claude-brain"
+REPO="Maikdelmar/herick-brain"
 
 say()  { printf '  %s\n' "$*"; }
 die()  { printf '\n  x %s\n\n' "$*" >&2; exit 1; }
@@ -60,7 +60,7 @@ else
   has claude && say "ok   Claude Code" || say "!    Claude Code instalado, mas so aparece num terminal novo."
 fi
 
-if [ -d "$HOME/Documents" ]; then default="$HOME/Documents/segundo-cerebro"; else default="$HOME/segundo-cerebro"; fi
+if [ -d "$HOME/Documents" ]; then default="$HOME/Documents/cerebro-herick"; else default="$HOME/cerebro-herick"; fi
 dest="${BRAIN_DIR:-}"
 if [ -z "$dest" ]; then
   echo
@@ -70,10 +70,10 @@ dest="${dest/#\~/$HOME}"
 
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
-git clone --depth 1 -q "https://github.com/$REPO.git" "$tmp/claude-brain" \
+git clone --depth 1 -q "https://github.com/$REPO.git" "$tmp/herick-brain" \
   || die "Nao consegui baixar o modelo do GitHub. Confira a internet e tente de novo."
 
-node "$tmp/claude-brain/bin/init.mjs" "$dest" || exit 1
+node "$tmp/herick-brain/bin/init.mjs" "$dest" || exit 1
 rm -rf "$tmp"; trap - EXIT   # o exec abaixo nao roda o trap
 
 open="$(ask "Abrir o Claude no cerebro agora? [S/n]" "s")"

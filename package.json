@@ -1,10 +1,10 @@
 {
-  "name": "claude-brain",
+  "name": "herick-brain",
   "version": "1.0.0",
   "description": "Segundo cérebro pro Claude Code: memória em markdown, comandos e um harness que mantém os índices sozinhos.",
   "type": "module",
   "bin": {
-    "claude-brain": "./bin/init.mjs"
+    "herick-brain": "./bin/init.mjs"
   },
   "engines": {
     "node": ">=18"
@@ -18,6 +18,7 @@
     "claude-code",
     "second-brain",
     "segundo-cerebro",
+    "herick",
     "memory",
     "obsidian"
   ]

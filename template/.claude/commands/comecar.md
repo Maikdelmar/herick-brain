@@ -17,7 +17,7 @@ Objetivo: no fim, qualquer sessão nova do Claude abre sabendo quem ele é, o qu
 
 ## Roteiro (adapte, não leia em voz alta)
 
-1. Como quer ser chamado? Em que cidade mora?
+1. Confirme o nome ("Te chamo de Herick mesmo?") e pergunte a cidade.
 2. O que você faz? (trabalho, empresa, profissão, estudo)
 3. Quais áreas da vida você quer que este cérebro acompanhe? Dê exemplos: trabalho, um cliente específico, uma empresa, finanças, estudo, saúde, um projeto paralelo.
 4. Tem algum projeto rolando agora? (cada um vira uma nota em `_projetos/`)
@@ -30,7 +30,7 @@ Objetivo: no fim, qualquer sessão nova do Claude abre sabendo quem ele é, o qu
 ## O que gravar (depois da última pergunta)
 
 1. **`_memory/perfil.md`** — preencha todas as seções com as respostas. Troque `status: stub` por `status: active` e ajuste `updated:` pra hoje.
-2. **`CLAUDE.md` §2** — troque `{{NOME}}`, `{{O_QUE_FAZ}}`, `{{AREAS}}`, `{{ESTILO}}`, `{{NUNCA}}` por versões curtas das respostas. Troque também o `{{NOME}}` do título.
+2. **`CLAUDE.md` §2** — confira o nome (já vem como Herick; ajuste se ele preferir outro) e troque `{{O_QUE_FAZ}}`, `{{AREAS}}`, `{{ESTILO}}`, `{{NUNCA}}` por versões curtas das respostas. Se o nome mudar, troque também no título.
 3. **`_memory/current-state.md`** — em **Foco agora**, o foco dos 3 meses. Em **Onde parei**, uma linha: "AAAA-MM-DD — Cérebro configurado com /comecar".
 4. **Projetos citados** → uma nota por projeto em `_projetos/`, a partir de `_templates/projeto.md`, com `status: active`.
 5. **Pessoas citadas** → uma nota por pessoa em `_pessoas/`, a partir de `_templates/pessoa.md`. Só o que ele disse.

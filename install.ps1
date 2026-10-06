@@ -1,7 +1,7 @@
-# claude-brain - instalador para Windows
+# herick-brain - instalador para Windows
 #
 # Uso (PowerShell):
-#   irm https://raw.githubusercontent.com/Maikdelmar/claude-brain/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/Maikdelmar/herick-brain/main/install.ps1 | iex
 #
 # O que faz, nesta ordem:
 #   1. confere (e, se faltar, instala pelo winget) o Git e o Node.js LTS
@@ -14,7 +14,7 @@
 
 & {
   $ErrorActionPreference = 'Stop'
-  $Repo = 'Maikdelmar/claude-brain'
+  $Repo = 'Maikdelmar/herick-brain'
 
   function Say($m) { Write-Host "  $m" }
   function Has($c) { [bool](Get-Command $c -ErrorAction SilentlyContinue) }
@@ -60,7 +60,7 @@
       else { Say "!    Claude Code instalado, mas so aparece num terminal novo." }
     }
 
-    $default = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'segundo-cerebro'
+    $default = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'cerebro-herick'
     $dest = $env:BRAIN_DIR
     if (-not $dest) {
       Write-Host ""
@@ -68,7 +68,7 @@
       $dest = if ([string]::IsNullOrWhiteSpace($resp)) { $default } else { $resp.Trim('"', ' ') }
     }
 
-    $tmp = Join-Path ([IO.Path]::GetTempPath()) ("claude-brain-" + [guid]::NewGuid().ToString('N').Substring(0, 8))
+    $tmp = Join-Path ([IO.Path]::GetTempPath()) ("herick-brain-" + [guid]::NewGuid().ToString('N').Substring(0, 8))
     git clone --depth 1 -q "https://github.com/$Repo.git" $tmp
     if ($LASTEXITCODE -ne 0) { throw "Nao consegui baixar o modelo do GitHub. Confira a internet e tente de novo." }
 

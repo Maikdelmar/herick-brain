@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// claude-brain — instala um segundo cérebro pro Claude Code numa pasta.
+// herick-brain — instala um segundo cérebro pro Claude Code numa pasta.
 //
-//   node bin/init.mjs [pasta]              instala (padrão: ~/Documents/segundo-cerebro)
+//   node bin/init.mjs [pasta]              instala (padrão: ~/Documents/cerebro-herick)
 //   node bin/init.mjs [pasta] --atualizar  atualiza só o harness de um cérebro existente
 //
 // Nunca sobrescreve nota. Zero dependências.
@@ -21,7 +21,7 @@ const positional = args.filter(a => !a.startsWith('--'));
 
 function defaultDest() {
   const docs = path.join(os.homedir(), 'Documents');
-  return path.join(fs.existsSync(docs) ? docs : os.homedir(), 'segundo-cerebro');
+  return path.join(fs.existsSync(docs) ? docs : os.homedir(), 'cerebro-herick');
 }
 
 const expand = p => p.replace(/^~(?=$|[\\/])/, os.homedir());
@@ -98,7 +98,7 @@ if (update) {
 
 for (const f of ['CLAUDE.md', 'INDEX.md', '_memory']) {
   if (fs.existsSync(path.join(DEST, f))) {
-    die(`Já existe um cérebro (ou um ${f}) em ${DEST}.\n    Pra atualizar só o harness: npx github:Maikdelmar/claude-brain "${DEST}" --atualizar`);
+    die(`Já existe um cérebro (ou um ${f}) em ${DEST}.\n    Pra atualizar só o harness: npx github:Maikdelmar/herick-brain "${DEST}" --atualizar`);
   }
 }
 

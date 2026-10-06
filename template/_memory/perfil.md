@@ -13,7 +13,7 @@ updated: {{HOJE}}
 
 ## Quem é
 
-- **Nome / como prefere ser chamado:** pendente
+- **Nome / como prefere ser chamado:** Herick _(confirmar no /comecar como prefere ser chamado)_
 - **Cidade / fuso:** pendente
 - **O que faz (trabalho, negócio, estudo):** pendente
 

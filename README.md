@@ -1,6 +1,6 @@
-# claude-brain — segundo cérebro pro Claude Code
+# herick-brain — o segundo cérebro do Herick
 
-O Claude Code esquece tudo quando a conversa fecha. Este repositório instala, numa pasta sua, a
+Herick, este é o seu. O Claude Code esquece tudo quando a conversa fecha. Este repositório instala, numa pasta sua, a
 memória que ele não tem: quem você é, o que está fazendo, o que já decidiu e o que já deu errado.
 Tudo em markdown, versionado no git, **seu**. Nada aqui vem preenchido: a estrutura chega vazia e
 o Claude te entrevista pra montar o conteúdo.
@@ -10,23 +10,23 @@ o Claude te entrevista pra montar o conteúdo.
 **Windows** (PowerShell):
 
 ```powershell
-irm https://raw.githubusercontent.com/Maikdelmar/claude-brain/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Maikdelmar/herick-brain/main/install.ps1 | iex
 ```
 
 **macOS / Linux**:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Maikdelmar/claude-brain/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Maikdelmar/herick-brain/main/install.sh | bash
 ```
 
 O instalador confere e instala o que faltar (**Git**, **Node.js 18+**, **Claude Code**), cria o
-cérebro em `Documentos/segundo-cerebro` (ele pergunta, dá pra trocar) e oferece abrir o Claude lá
+cérebro em `Documentos/cerebro-herick` (ele pergunta, dá pra trocar) e oferece abrir o Claude lá
 dentro. Na primeira conversa, digite **`/comecar`**.
 
 Já tem Node? Também funciona assim:
 
 ```bash
-npx github:Maikdelmar/claude-brain ~/Documents/segundo-cerebro
+npx github:Maikdelmar/herick-brain ~/Documents/cerebro-herick
 ```
 
 ## O que vem dentro
@@ -64,7 +64,7 @@ Detalhe em [`template/HARNESS.md`](template/HARNESS.md).
 Atualiza só os scripts e adiciona comandos novos. Não toca em nenhuma nota:
 
 ```bash
-npx github:Maikdelmar/claude-brain ~/Documents/segundo-cerebro --atualizar
+npx github:Maikdelmar/herick-brain ~/Documents/cerebro-herick --atualizar
 ```
 
 ## O que isto não faz

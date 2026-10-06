@@ -1,7 +1,7 @@
-# Segundo Cérebro de {{NOME}}
+# Segundo Cérebro de Herick
 
 > A lei desta pasta. Qualquer agente que abrir aqui lê isto primeiro e segue.
-> Se o título acima ainda mostra `{{NOME}}`, o cérebro não foi configurado: rode `/comecar`.
+> Se `_memory/perfil.md` ainda está como `status: stub`, o cérebro não foi configurado: rode `/comecar`.
 
 ---
 
@@ -36,7 +36,7 @@
 
 > Preenchido no `/comecar`. Detalhe completo em [[perfil]].
 
-- **Nome:** {{NOME}}
+- **Nome:** Herick
 - **O que faz:** {{O_QUE_FAZ}}
 - **Áreas que este cérebro cobre:** {{AREAS}}
 - **Como prefere receber resposta:** {{ESTILO}}
